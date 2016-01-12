@@ -49,5 +49,17 @@ public class TestUser {
 		t.setEmail(s);
 		assertTrue(u.equal(t));
 	}
+	@Test
+	public void testEqual2() {
+		User t=new User();
+		String s="test";
+		u.setEmail(s);
+		u.setUsername(s);
+		t.setUsername("asa");
+		t.setEmail(s);
+		assertFalse(u.equal(t));
+		t.setEmail("asa");
+		assertFalse(u.equal(t));
+	}
 
 }

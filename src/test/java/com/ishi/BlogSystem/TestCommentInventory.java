@@ -36,4 +36,23 @@ public class TestCommentInventory {
 		assertNotNull(ci.search(u));
 		
 	}
+	@Test
+	public void testSearch2()
+
+	{
+		String s="test";
+		User u1=new User();
+		u1.setUsername("test1");
+		u1.setEmail("test1");
+		ci.addComment(u,s);
+		ci.addComment(u,s);
+		ci.addComment(u,s);
+		ci.addComment(u,s);
+		ci.addComment(u1,s);
+		ci.addComment(u1,s);
+
+		assertEquals(4,ci.search(u));
+		assertEquals(4,ci.search(u1));
+
+	}
 }

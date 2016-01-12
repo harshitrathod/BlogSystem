@@ -78,9 +78,16 @@ public class TestUserInventory {
 	@Test
 	public void testAuthenticateFail() {
 		u.addUser(s, p, e);
-		User a=new User();
+
 		assertNull(u.authenticate(s+p,p+s));
 		
+	}
+	@Test
+	public void testAuthenticateFail2() {
+		u.addUser(s, p, e);
+
+		assertNull(u.authenticate(s,p+s));
+
 	}
 
 }
