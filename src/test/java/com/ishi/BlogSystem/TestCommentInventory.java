@@ -51,8 +51,8 @@ public class TestCommentInventory {
 		ci.addComment(u1,s);
 		ci.addComment(u1,s);
 
-		assertEquals(4,ci.search(u));
-		assertEquals(4,ci.search(u1));
+		assertEquals(4,ci.search(u).size());
+		assertEquals(2,ci.search(u1).size());
 
 	}
 }
