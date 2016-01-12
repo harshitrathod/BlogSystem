@@ -18,6 +18,20 @@
 
     <build>
 
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${compile.version}</version>
+                    <configuration>
+                        <source>${jdk.source}</source>
+                        <target>${jdk.target}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
 
             <plugin>
@@ -57,7 +71,9 @@
         <junit.version>4.10</junit.version>
         <codehaus.version>2.7</codehaus.version>
         <surefire.version>2.19.1</surefire.version>
-
+        <compile.version>3.3</compile.version>
+        <jdk.source>1.7</jdk.source>
+        <jdk.target>1.7</jdk.target>
     </properties>
 
 
